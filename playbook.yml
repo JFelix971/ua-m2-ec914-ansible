@@ -1,0 +1,9 @@
+---
+- name: Installation de dotdeb & backport
+  hosts: all
+  become: yes
+  become_method: su
+
+  roles:
+    - role: repository
+...

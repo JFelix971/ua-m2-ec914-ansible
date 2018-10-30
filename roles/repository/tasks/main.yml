@@ -1,0 +1,17 @@
+---
+  - name: Ajout de DotDeb
+    apt_repository: repo= 'deb http://packages.dotdeb.org {{ansible_lsb['codename']}} all' #'{{ item }}'
+    #with_items:
+    #  - deb http://packages.dotdeb.org {{ansible_lsb['codename']}} all
+    #  - deb-src http://packages.dotdeb.org {{ansible_lsb['codename']}} Installation
+
+  - name: Ajout clef DotDeb
+    apt_key: url=https://wwww.dotdeb.org/dotdeb.gpg
+    state: present
+
+  - name: Ajout de backport
+    apt-repository: repo= 'deb http://deb.debian.org/debian {{ansible_lsb['codename']}}-backports main contrib non free'
+
+  - name: APT update
+    apt: update_cache=yes
+...
