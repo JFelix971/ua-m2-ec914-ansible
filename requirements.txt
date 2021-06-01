@@ -63,7 +63,7 @@ six==1.11.0
 SOAPpy==0.12.22
 software-center-aptd-plugins==0.0.0
 Twisted==17.9.0
-urllib3==1.22
+urllib3==1.26.5
 webencodings==0.5
 wstools==0.4.3
 xmltodict==0.11.0
